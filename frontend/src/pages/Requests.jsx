@@ -17,7 +17,7 @@ function Requests() {
     const fetchRequests = async () => {
       try {
         const response = await fetch(
-          'http://localhost:5000/api/requests'
+          'https://smart-campus-management-wmbi.onrender.com/api/requests'
         )
 
         const data = await response.json()
@@ -56,7 +56,7 @@ function Requests() {
 
     try {
       const response = await fetch(
-        'http://localhost:5000/api/requests',
+        'https://smart-campus-management-wmbi.onrender.com/api/requests',
         {
           method: 'POST',
           headers: {

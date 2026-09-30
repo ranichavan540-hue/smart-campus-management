@@ -13,7 +13,7 @@ function Events() {
       try {
 
         const response = await fetch(
-          'http://localhost:5000/api/events'
+          'https://smart-campus-management-wmbi.onrender.com/api/events'
         )
 
         const data = await response.json()
