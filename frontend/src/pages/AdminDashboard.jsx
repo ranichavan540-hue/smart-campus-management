@@ -65,7 +65,7 @@ function AdminDashboard() {
     const fetchNotices = async () => {
       try {
         const response = await fetch(
-          'https://smart-campus-management-wmbi.onrender.com/api/notices'
+          'http://localhost:5000/api/notices'
         )
 
         const data = await response.json()
@@ -87,7 +87,7 @@ function AdminDashboard() {
     const fetchEvents = async () => {
       try {
         const response = await fetch(
-          'https://smart-campus-management-wmbi.onrender.com/api/events'
+          'http://localhost:5000/api/events'
         )
 
         const data = await response.json()
@@ -110,7 +110,7 @@ function AdminDashboard() {
     const fetchStudents = async () => {
       try {
         const response = await fetch(
-          'https://smart-campus-management-wmbi.onrender.com/api/students'
+          'http://localhost:5000/api/students'
         )
 
         const data = await response.json()
@@ -132,7 +132,7 @@ function AdminDashboard() {
     const fetchRequests = async () => {
       try {
         const response = await fetch(
-          'https://smart-campus-management-wmbi.onrender.com/api/requests'
+          'http://localhost:5000/api/requests'
         )
 
         const data = await response.json()
@@ -156,7 +156,7 @@ function AdminDashboard() {
   const fetchAttendance = async () => {
     try {
       const response = await fetch(
-        'https://smart-campus-management-wmbi.onrender.com/api/attendance'
+        'http://localhost:5000/api/attendance'
       )
 
       const data = await response.json()
@@ -182,7 +182,7 @@ function AdminDashboard() {
     const fetchNotifications = async () => {
       try {
         const response = await fetch(
-          'https://smart-campus-management-wmbi.onrender.com/api/notifications'
+          'http://localhost:5000/api/notifications'
         )
 
         const data = await response.json()
@@ -213,7 +213,7 @@ function AdminDashboard() {
 
     try {
         const response = await fetch(
-            'https://smart-campus-management-wmbi.onrender.com/api/notices',
+            'http://localhost:5000/api/notices',
             {
               method: 'POST',
               headers: {
@@ -264,7 +264,7 @@ function AdminDashboard() {
 
         try {
           const response = await fetch(
-            'https://smart-campus-management-wmbi.onrender.com/api/notifications',
+            'http://localhost:5000/api/notifications',
           {
             method: 'POST',
             headers: {
@@ -321,7 +321,7 @@ function AdminDashboard() {
 
       try {
         const response = await fetch(
-          `https://smart-campus-management-wmbi.onrender.com/api/notifications/${notificationId}`,
+          `http://localhost:5000/api/notifications/${notificationId}`,
         {
           method: 'DELETE'
         }
@@ -368,7 +368,7 @@ function AdminDashboard() {
 
   try {
     const response = await fetch(
-      `https://smart-campus-management-wmbi.onrender.com/api/attendance/${attendanceId}`,
+      `http://localhost:5000/api/attendance/${attendanceId}`,
       {
         method: 'DELETE'
       }
@@ -422,7 +422,7 @@ const handleStudyMaterialUpload = async (e) => {
     formData.append('file', studyMaterialForm.file)
 
     const response = await fetch(
-      'https://smart-campus-management-wmbi.onrender.com/api/study-materials/upload',
+      'http://localhost:5000/api/study-materials/upload',
       {
         method: 'POST',
         body: formData
@@ -919,7 +919,7 @@ const handleStudyMaterialUpload = async (e) => {
 
       try {
         const response = await fetch(
-          'https://smart-campus-management-wmbi.onrender.com/api/events',
+          'http://localhost:5000/api/events',
           {
             method: 'POST',
             headers: {
@@ -1204,7 +1204,7 @@ const handleStudyMaterialUpload = async (e) => {
 
                 try {
                   const response = await fetch(
-                    'https://smart-campus-management-wmbi.onrender.com/api/attendance',
+                    'http://localhost:5000/api/attendance',
                     {
                       method: 'POST',
                       headers: {
@@ -1561,7 +1561,7 @@ const handleStudyMaterialUpload = async (e) => {
       ) : (
         <div className="study-material-list">
           {studyMaterials.map((material) => {
-            const fileUrl = `https://smart-campus-management-wmbi.onrender.com/${material.filePath.replace(/\\/g, '/')}`
+            const fileUrl = `http://localhost:5000/${material.filePath.replace(/\\/g, '/')}`
 
             return (
               <div
@@ -1704,7 +1704,7 @@ const handleStudyMaterialUpload = async (e) => {
 
                   try {
                     const response = await fetch(
-                      `https://smart-campus-management-wmbi.onrender.com/api/requests/${request._id}/status`,  
+                      `http://localhost:5000/api/requests/${request._id}/status`,  
                       {  
                         method: 'PUT',  
                         headers: {  

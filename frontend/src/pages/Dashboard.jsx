@@ -14,7 +14,7 @@ function Dashboard() {
     const fetchNotifications = async () => {
       try {
         const response = await fetch(
-          'https://smart-campus-management-wmbi.onrender.com/api/notifications'
+          'http://localhost:5000/api/notifications'
         )
 
         const data = await response.json()
@@ -40,7 +40,7 @@ function Dashboard() {
       console.log('Notification clicked:', notificationId)
     try {
       const response = await fetch(
-        `https://smart-campus-management-wmbi.onrender.com/api/notifications/${notificationId}/read`,
+        `http://localhost:5000/api/notifications/${notificationId}/read`,
         {
           method: 'PUT'
         }
