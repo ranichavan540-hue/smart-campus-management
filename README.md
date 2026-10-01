@@ -107,3 +107,14 @@ The system also includes an AI Assistant that helps students with campus-related
 Rani Laxman Chavan
 
 Smart Campus Management System
+
+**STEP1:RUN THAT TERMINAL**
+1]cd backend
+2]node server.js
+**STEP2:SECOND TERMINAL OPEN**
+1] cd C:\Users\ranic\Downloads\smart-campus-management\frontend
+2] npm.cmd run dev
+**STEP3:THESE LINK OPEN THEN LOGIN THAT**,
+http://localhost:5173/login
+
+
